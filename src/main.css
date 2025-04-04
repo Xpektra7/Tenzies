@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:monospace;
+}
+body{
+    background-color: #f5f5f5;
+    overflow: hidden;
+    
+}
+.header{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: center;
+    background-image: linear-gradient(135deg,hsl(290, 100%, 50%), hsl(270, 100%, 40%));
+    gap: .8rem;
+    color: white;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+    padding: 1rem;
+}
+.main{
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+
+    .cardcase{
+        width: 100%;
+        max-width: 600px;
+        display: grid;
+        height: fit-content;
+        grid-template-columns: repeat(5,minmax(60px,1fr));
+        gap: .5rem;  
+        
+        .card{
+            background-image: linear-gradient(135deg,hsl(290, 100%, 50%), hsl(270, 100%, 40%));
+            width: 100%;
+            height: auto;
+            border:none;
+            aspect-ratio: 1/1 ;
+            border-radius:0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.35) , 0 4px 15px hsla(0, 0%, 0%, 0.15);
+
+            &:active{
+                box-shadow:none;
+            }
+            }
+    
+        .heldcard{
+            background-color: hsl(0, 0%, 50%);
+            width: 100%;
+            height: auto;
+            border:none;
+            aspect-ratio: 1/1 ;
+            border-radius:0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.35) , 0 4px 15px hsla(0, 0%, 0%, 0.15);
+            }
+    
+    }
+    >button,.tip button{
+        padding: 1rem 4rem;
+        background-image: linear-gradient(135deg,hsl(290, 100%, 50%), hsl(270, 100%, 40%));
+        border:none;
+        border-radius:0.5rem;
+        font-size: 1rem;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.35) , 0 4px 15px hsla(0, 0%, 0%, 0.15);
+
+        &:active{
+            box-shadow:none;
+        }
+
+    }
+    >.tip{
+        font-size: 1.2rem;
+        color: hsl(0, 0%, 50%);
+        font-weight: 400;
+        width: 100%;
+        max-width: 600px;
+
+        >div{
+            margin:2rem 0;
+
+            &.hidden{
+                display: none;
+            }
+        }
+    }
+
+}
